@@ -1,0 +1,13 @@
+# Calculate the average price by year
+average_price <- aggregate(price ~ year, data = df, FUN = mean)
+
+# Plot the average price trend
+plot(average_price$year, average_price$price, type = "b",
+     main = "Average Car Price Trend Over Years",
+     xlab = "Year", ylab = "Average Price (£)",
+     pch = 19, col = "blue", lwd = 2)
+# The graph shows that newer cars generally have higher average prices,
+# reflecting better features, advanced technology, and lower depreciation. 
+# Older cars have lower average prices due to depreciation.
+# Sudden jumps or plateaus may indicate the release of premium models or shifts in market trends.
+# Overall, after 2010 price of cars increased dramatically
